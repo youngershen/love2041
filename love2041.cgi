@@ -4,7 +4,7 @@ use warnings;
 use CGI;
 
 use lib './libs';
-use zentemplate;
+use Zentemplate;
 
 $query = new CGI;
 @name = $query->param('name');
