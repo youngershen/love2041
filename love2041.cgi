@@ -1,3 +1,16 @@
 #!/usr/bin/perl  
-print "Content-type: text/html\n\n";  
-print "Hello, world.";  
+
+use CGI;
+$request = CGI->new;
+
+print $request->header,
+    $request->start_html('hello world'),
+    $request->h1("helloworld"),
+    $request->end_html;
+
+foreach(sort keys %ENV)
+{
+        print "<b>$_</b> : $ENV{$_} </br>";
+}
+
+1;
