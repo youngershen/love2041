@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 # -*- coding:utf-8 -*-  
 
 import os
@@ -8,8 +8,9 @@ DATADIR = os.getcwd() + "../data/students/"
 TEMPLATEDIR = os.getcwd() + "/template/"
 IMGTYPE = ['png', 'jpg', 'jpeg', 'gif','bmp']
 
-WEBDIR = "/love2041/"
+WEBDIR = "/cgi-bin/love2041/"
 HTML_STOKEN = "{{"
 HTML_ETOKEN = "}}"
 
 DATADIR = os.getcwd() +  "/data/students/"
+PAGESIZE = 10

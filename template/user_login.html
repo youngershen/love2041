@@ -7,7 +7,20 @@
 
         <script type="text/javascript" charset="utf-8" src="{{server_addr}}static/lib/bootstrap/js/bootstrap.min.js"></script>
         <title>FACEFUCK DATING SITE</title>
-        
+        <style type="text/css" media="screen">
+            body{
+                align : center;
+            }
+            #center{ 
+                MARGIN-RIGHT: auto;
+                MARGIN-LEFT: auto;
+                height:200px;
+                background:#F00;
+                width:400px;
+                vertical-align:middle;
+                line-height:200px;
+            }
+        </style>        
     </head>
     
     <body>
@@ -63,24 +76,54 @@
                         </li>
                     </ul>
             </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
-        
-        <div id="{{name}}">
-            <img src="{{photo}}"/>
-            </br>
-            <a href= "{{server_addr}}person_info.cgi?username={{username}}">{{name}}</a>
-            </br>
-            gender : {{gender}}
-            </br>
-            hair color :{{hair_colour}}
-            </br>
-            height : {{height}}
-            </br>
-        </div>
-         <div id="pager">
-             <a href="{{server_addr}}love2041.cgi?page={{up_page}}">page up</a> <a href="{{server_addr}}love2041.cgi?page={{down_page}}">page down</a>
-         </div>
+            </div><!-- /.container-fluid -->
+        </nav>
+        <div class="container-fluid">
+        <div class="row">
 
-    </body>
+        <div class="col-xs-6 col-md-4">
+            </div>
+        <div class="col-xs-6 col-md-4">
+        <form class="form-horizontal" action="{{server_addr}}user_login.cgi" method="POST">
+            <fieldset>
+                <div id="legend" class="">
+                    <legend class="">login</legend>
+                </div>
+            <div class="control-group">
+            <!-- Text input-->
+                <label class="control-label" for="input01">username</label>
+                <div class="controls">
+                    <input placeholder="username" class="input-xlarge" type="text" name="username">
+                    <p class="help-block">input username</p>
+                </div>
+            </div>
+    
+                <div class="control-group">
+                <!-- Text input-->
+                    <label class="control-label" for="input01">password</label>
+                    <div class="controls">
+                        <input placeholder="password" class="input-xlarge" type="password" name="password">
+                        <p class="help-block">input password</p>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <!-- Button -->
+                    <div class="controls">
+                        <button class="btn btn-primary">submit</button>
+                        <button class="btn btn-primary">reset</button>
+                    </div>
+                </div>
+            
+        </fieldset>
+    </form>
+        <div class="col-xs-6 col-md-4">
+        </div>    
+    </div>
+    </div>
+    </div>
+
+  </body>
 </html>
+
+

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 # -*- coding:utf-8 -*-  
 
 import re
@@ -19,7 +19,6 @@ class DataParser(object):
         except IOError as e:
             print "open file error , please check"
             exit(0)
-
         else:
             self.content  = content
             return self.__parse_data()
